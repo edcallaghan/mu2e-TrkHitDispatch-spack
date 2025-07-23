@@ -30,6 +30,7 @@ class TrkHitDispatch(CMakePackage):
 
     # Direct dependencies
     depends_on("Offline")
+    depends_on("cetmodules", type="build")
 
     def cmake_args(self):
         args = [self.define_from_variant("CMAKE_CXX_STANDARD", "cxxstd")]
